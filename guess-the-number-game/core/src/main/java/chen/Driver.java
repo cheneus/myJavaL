@@ -2,6 +2,7 @@ package chen;
 
 import chen.config.AppConfig;
 import chen.services.Game;
+import chen.services.MessageGen;
 import chen.services.NumberGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +22,10 @@ public class Driver {
         ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         NumberGen numberGen = context.getBean(NumberGen.class);
-        Game game = context.getBean(Game.class);
+        MessageGen messageGen = context.getBean(MessageGen.class);
         log.info("Driver Starting");
         int number = numberGen.next();
-
+        log.info(messageGen.getMainMessage());
         log.info("The number is  {}", number);
         // close context
         context.close();

@@ -1,9 +1,6 @@
 package chen.config;
 
-import chen.services.Game;
-import chen.services.GameImpl;
-import chen.services.NumberGen;
-import chen.services.NumberGenImpl;
+import chen.services.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -20,5 +17,10 @@ public class AppConfig {
     @Bean
     public Game game() {
         return new GameImpl();
+    }
+
+    @Bean
+    public MessageGen messageGen() {
+        return new MessageGenImpl();
     }
 }
