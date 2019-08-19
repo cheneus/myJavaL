@@ -7,10 +7,6 @@ public class GameImpl implements Game {
 
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
-    public GameImpl(NumberGen numberGen) {
-        this.numberGen = numberGen;
-    }
-
     private NumberGen numberGen;
     private int guessCount = 5;
     private int number;
@@ -20,6 +16,10 @@ public class GameImpl implements Game {
     private int remainingGuess;
     private boolean validNumberRange = true;
 
+    public void setNumberGen(NumberGen numberGen) {
+        this.numberGen = numberGen;
+    }
+
     @Override
     public void reset() {
         smallest = 0;
@@ -27,7 +27,7 @@ public class GameImpl implements Game {
         remainingGuess = guessCount;
         biggest = numberGen.getMaxNumber();
         number = numberGen.next();
-        log.debug("the number is {}", number);
+        log.info("the number is {}", number);
     }
 
     @Override

@@ -21,7 +21,7 @@ public class Driver {
         NumberGen numberGen = context.getBean("numberGen", NumberGen.class);
 
         int number = numberGen.next();
-        log.info("number = {}", number);
+        log.info("test number = {}", number);
 
         // get bean
         Game game = context.getBean(Game.class);
