@@ -3,12 +3,13 @@ package chen.services;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+@Component
 public class GameImpl implements Game {
-
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     @Autowired
