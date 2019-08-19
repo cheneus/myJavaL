@@ -17,17 +17,9 @@ public class Driver {
 
         // create context
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
-
-        NumberGen numberGen = context.getBean("numberGen", NumberGen.class);
-
-        int number = numberGen.next();
-        log.info("test number = {}", number);
-
-        // get bean
         Game game = context.getBean(Game.class);
-
-        game.reset();
-
+        log.info("Driver Starting");
+        // close context
         context.close();
     }
 }
