@@ -13,4 +13,6 @@ public interface Game {
     boolean isValidNumRange();
     boolean isGameWon();
     boolean isGameLost();
+
+    int getRemainingGuesses();
 }

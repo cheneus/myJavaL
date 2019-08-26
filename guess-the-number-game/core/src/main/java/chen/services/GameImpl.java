@@ -45,17 +45,17 @@ public class GameImpl implements Game {
 
     @Override
     public int getGuess() {
-        return 0;
+        return 12;
     }
 
     @Override
     public int getSmallest() {
-        return 0;
+        return smallest;
     }
 
     @Override
     public int getBiggest() {
-        return 0;
+        return biggest;
     }
 
     @Override
@@ -92,6 +92,11 @@ public class GameImpl implements Game {
     @Override
     public boolean isGameLost() {
         return !isGameWon() && remainingGuess <= 0;
+    }
+
+    @Override
+    public int getRemainingGuesses() {
+        return remainingGuess;
     }
 
     //private method
