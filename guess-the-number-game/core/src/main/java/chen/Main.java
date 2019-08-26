@@ -1,4 +1,4 @@
-package java.chen;
+package chen;
 
 import chen.config.AppConfig;
 import chen.services.MessageGen;
