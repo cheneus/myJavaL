@@ -5,7 +5,7 @@
         </encoder>
     </appender>
 
-    <logger name="chen.Driver" level="DEBUG"/>
+    <logger name="chen.Main" level="DEBUG"/>
     <logger name="org.springframework" level="DEBUG"/>
 
     <root level="INFO">

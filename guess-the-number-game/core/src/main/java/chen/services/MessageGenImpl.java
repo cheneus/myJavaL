@@ -13,7 +13,7 @@ public class MessageGenImpl implements MessageGen {
 
     @Autowired
     private Game game;
-    private int GuessCount = 5;
+    private int guessCount = 5;
 
     @PostConstruct
     public void init() {
@@ -22,11 +22,26 @@ public class MessageGenImpl implements MessageGen {
 
     @Override
     public String getMainMessage() {
-        return "Main";
+        return "Number is between " + game.getSmallest() + " and " + game.getBiggest() + " Can you guess it?";
     }
 
     @Override
     public String getResultMessage() {
-        return "Result";
+        if (game.isGameWon()) {
+            return "You guessed it, the number is {}" + game.getNumber();
+        } else if  (game.isGameLost()) {
+            return "You lost";
+        } else if (game.isValidNumRange()) {
+            return "Please input a valid number range";
+        } else if (game.getRemainingGuesses() == guessCount) {
+            return "What is your first guess";
+        } else {
+            String direction = "Lower";
+            if (game.getGuess() < game.getNumber()) {
+                direction = "Higher";
+            }
+            return direction + "!, You have" + game.getRemainingGuesses() + " guess left";
+        }
     }
+
 }

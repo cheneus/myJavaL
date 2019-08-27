@@ -179,7 +179,11 @@ hs_err_pid*
 
 ### Gradle ###
 .gradle
-build/
+# intellij 
+**/.idea
+**/out/
+**/target/
+**/*.iml
 
 # Ignore Gradle GUI config
 gradle-app.setting
