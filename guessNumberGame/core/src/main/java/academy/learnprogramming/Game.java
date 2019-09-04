@@ -1,18 +1,27 @@
-package chen.services;
+package academy.learnprogramming;
 
 public interface Game {
+
     int getNumber();
+
     int getGuess();
-    int getSmallest();
-    int getBiggest();
+
     void setGuess(int guess);
 
-    void reset();
-    void check();
+    int getSmallest();
 
-    boolean isValidNumRange();
-    boolean isGameWon();
-    boolean isGameLost();
+    int getBiggest();
 
     int getRemainingGuesses();
+
+    void reset();
+
+    void check();
+
+    boolean isValidNumberRange();
+
+    boolean isGameWon();
+
+    boolean isGameLost();
+
 }

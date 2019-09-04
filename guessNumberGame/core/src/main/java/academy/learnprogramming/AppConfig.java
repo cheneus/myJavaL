@@ -1,17 +1,17 @@
-package chen.config;
+package academy.learnprogramming;
 
-import chen.services.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "chen.config")
+@ComponentScan(basePackages = "academy.learnprogramming")
 public class AppConfig {
 
+    // == bean methods ==
     @Bean
-    public NumberGen numberGen() {
-        return new NumberGenImpl();
+    public NumberGenerator numberGenerator() {
+        return new NumberGeneratorImpl();
     }
 
     @Bean
@@ -20,7 +20,7 @@ public class AppConfig {
     }
 
     @Bean
-    public MessageGen messageGen() {
-        return new MessageGenImpl();
+    public MessageGenerator messageGenerator() {
+        return new MessageGeneratorImpl();
     }
 }

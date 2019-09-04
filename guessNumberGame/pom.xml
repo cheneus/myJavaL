@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>chen</groupId>
+    <groupId>academy.learnprogramming</groupId>
     <artifactId>guess-the-number-game</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -16,8 +16,8 @@
     <properties>
         <logback.version>1.2.3</logback.version>
         <spring.version>5.0.5.RELEASE</spring.version>
-        <java.version>12</java.version>
-        <annotation>1.3.2</annotation>
+        <java.version>10</java.version>
+        <annotation-api.version>1.3.2</annotation-api.version>
     </properties>
     <dependencyManagement>
 
@@ -37,11 +37,11 @@
                 <version>${spring.version}</version>
             </dependency>
 
-            <!--annotation api-->
+            <!-- Annotation API -->
             <dependency>
                 <groupId>javax.annotation</groupId>
                 <artifactId>javax.annotation-api</artifactId>
-                <version>${annotation}</version>
+                <version>${annotation-api.version}</version>
             </dependency>
         </dependencies>
 
@@ -52,7 +52,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.7.0</version>
                 <configuration>
                     <target>${java.version}</target>
                     <source>${java.version}</source>
