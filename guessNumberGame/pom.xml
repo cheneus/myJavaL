@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <logback.version>1.2.3</logback.version>
+        <logback.version>1.2.13</logback.version>
         <spring.version>5.0.5.RELEASE</spring.version>
         <java.version>10</java.version>
         <annotation-api.version>1.3.2</annotation-api.version>
